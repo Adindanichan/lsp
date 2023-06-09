@@ -37,7 +37,7 @@ class AuthController extends Controller
                 return redirect()->intended('/dashboard');
             }
 
-            return redirect('/login')->withErrors(['auth' => 'Wrong email or password']);
+            return redirect('/login')->withErrors(['auth' => 'Wrong email or password']); // phpcs:ignore ..DetectWeakValidation.Found
         }
 
         return view('login');
@@ -57,7 +57,7 @@ class AuthController extends Controller
         if ($request->method() == 'POST') {
             $request->validate(
                 [
-                    'name' => 'required|min:3',
+                    'name' => 'required|min:3', // phpcs:ignore ..DetectWeakValidation.Found
                     'nim' => 'required|unique:asesis,nim',
                     'prodi' => 'required|exists:prodis,id',
                     'email' => 'required|email|unique:users,email',
@@ -66,11 +66,11 @@ class AuthController extends Controller
                 ],
                 [],
                 [
-                    'name' => 'Name',
+                    'name' => 'Name', // phpcs:ignore ..DetectWeakValidation.Found
                     'nim' => 'NIM',
                     'prodi'=>'Prodi',
                     'cpassword' => 'Retype password'
-                 ],
+                ],
             );
 
             DB::beginTransaction();

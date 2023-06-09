@@ -21,13 +21,13 @@ class DatabaseSeeder extends Seeder
         try {
             
             $this->call([
-                ProdiSeeder::class,
-                SkemaSeeder::class,
-                // PersyaratanSkemaSeeder::class,
-                // EventSeeder::class,
-                UsersSeeder::class,
-                // AssesorSeeder::class,
-                // AsesiSeeder::class,
+                // ProdiSeeder::class,
+                // SkemaSeeder::class,
+                PersyaratanSkemaSeeder::class,
+                EventSeeder::class,
+                // UsersSeeder::class,
+                AssesorSeeder::class,
+                AsesiSeeder::class,
             ]);
 
             DB::commit();

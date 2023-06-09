@@ -19,7 +19,7 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="../../index2.html"><b>LSP</b></a>
+      <a href="../../index2.html"><b>LSP</b><p>SMKN 2 INDRAMAYU</p></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">

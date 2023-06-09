@@ -19,7 +19,7 @@ class PersyaratanSkemaSeeder extends Seeder
         
         $persyaratan = new PersyaratanSkema();
         $persyaratan->skema_id = $skema->id;
-        $persyaratan->name = 'Fotocopy Izajah SMA / Sederajat';
+        $persyaratan->name = 'Portofolio/ CV';
         $persyaratan->save();
     }
 }

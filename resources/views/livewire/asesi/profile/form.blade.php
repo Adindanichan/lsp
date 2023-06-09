@@ -104,7 +104,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Kualifikasi Pendidikan</label>
-                        <input wire:model="kualifikasi_pendidikan" name="kualifikasi_pendidikan" type="text" class="form-control @error('kualifikasi_pendidikan') is-invalid @enderror" placeholder="Contoh: D3, S1, D4">
+                        <input wire:model="kualifikasi_pendidikan" name="kualifikasi_pendidikan" type="text" class="form-control @error('kualifikasi_pendidikan') is-invalid @enderror" placeholder="Contoh: SMA, SMK, MA">
                         @error('kualifikasi_pendidikan') <span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                 </div>

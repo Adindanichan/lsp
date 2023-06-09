@@ -18,7 +18,7 @@
 <body class="hold-transition register-page">
   <div class="register-box">
     <div class="register-logo">
-      <a href="../../index2.html"><b>LSP</b></a>
+      <a href="../../index2.html"><b>LSP</b><p>SMKN 2 INDRAMAYU</p></a>
     </div>
 
     <div class="card">
@@ -41,7 +41,7 @@
             @enderror
           </div>
           <div class="input-group mb-3">
-            <input type="text" name="nim" class="form-control @error('nim') is-invalid @enderror" placeholder="NIM" value="{{ old('nim') }}">
+            <input type="text" name="nim" class="form-control @error('nim') is-invalid @enderror" placeholder="NISN" value="{{ old('nim') }}">
             <div class="input-group-append">
               <div class="input-group-text">
               <i class="fas fa-id-card"></i>
@@ -55,7 +55,7 @@
           </div>
           <div class="form-group">
             <select name="prodi" class="custom-select @error('prodi') is-invalid @enderror">
-              <option selected disabled>Pilih prodi</option>
+              <option selected disabled>Pilih Jurusan</option>
               @foreach($prodis as $prodi)
               <option value="{{$prodi->id}}">{{$prodi->name}}</option>
               @endforeach

@@ -10,10 +10,10 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="landing-page/img/POLINDRA.png" rel="icon">
+  <link href="landing-page/img/logo_pelayaran.png" rel="icon">
   <link href="landing-page/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts --> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -77,7 +77,7 @@
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center w-100% p-20%">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="landing-page/img/smkn2.jpg">
+      <img src="landing-page/img/smkn2.jpg" width="1550px">
       {{-- <img src="landing-page/img/gedung.jpg" class="img-fluid animated"> --}} 
       {{-- <h2>Welcome to <span>HeroBiz</span></h2> --}}
       {{-- <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
