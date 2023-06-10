@@ -86,17 +86,22 @@ Setelah langkah-langkah di atas selesai, proyek Laravel Anda sekarang sudah teri
 
 #Info Credential
 1. Asesor
-Username  @lspasesor1234
+Email  lspasesor@gmail.com
 Pw
 lspasesor1234
-
 2. Asesi : 
-@lspasesi1234
+Email
+lspasesi@gmail.com
 Pw
 lspasesi1234
-
 3. Admin
-Username
-@lspadmin1234
+Email
+lspadmin@gmail.com
 Pw
 lspadmin1234
+4. Manajer Sertifikat
+Email
+lspms@gmail.com
+Pw 
+lspms1234
+
