@@ -1,64 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+#Deskripsi Singkat
+Aplikasi asesmen kompetisi lembaga sertifikasi berbasis web untuk salah satu jurusan di SMK 2 Indramayu yaitu jurusan Rekayasa Perangkat Lunak atau biasa disingkat RPL.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+#Spesifikasi dan Kebutuhan
+Code Editor (Visual Studio Code, Sublime Text)
+XAMPP
+MySQL
+Laptop / Komputer
+Pencil Evolus
+HTML
+CSS
+PHP
+Bootstrap 
+Framework Laravel
 
-## About Laravel
+#Install dan Import Database
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Untuk menginstall sebuah proyek Laravel dan mengimpor database, ikuti langkah-langkah berikut:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Langkah 1: Persiapan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Pastikan komputer Anda telah memenuhi persyaratan sistem untuk menjalankan Laravel.
+   - PHP versi 7.4 atau yang lebih baru.
+   - Composer telah terinstal.
+   - Database server seperti MySQL, PostgreSQL, atau SQLite.
+   
+2. Pastikan Anda memiliki proyek Laravel yang ingin Anda instal. Jika Anda belum memiliki proyek, Anda dapat membuatnya dengan menjalankan perintah berikut di terminal:
+   ```
+   composer create-project --prefer-dist laravel/laravel nama-proyek-anda
+   ```
+   Ganti "nama-proyek-anda" dengan nama yang Anda inginkan untuk proyek Laravel Anda.
 
-## Learning Laravel
+3. Pastikan Anda memiliki file database yang ingin Anda impor. File tersebut mungkin berupa file SQL atau file dump dari database.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Langkah 2: Instalasi
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Buka terminal dan arahkan ke direktori proyek Laravel Anda dengan menggunakan perintah `cd`.
 
-## Laravel Sponsors
+2. Jalankan perintah `composer install` untuk menginstal semua dependensi proyek Laravel.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Salin file `.env.example` menjadi `.env` dengan menjalankan perintah:
+   ```
+   cp .env.example .env
+   ```
+   Pastikan file `.env` telah dibuat.
 
-### Premium Partners
+4. Generate kunci aplikasi dengan menjalankan perintah:
+   ```
+   php artisan key:generate
+   ```
+   Kunci aplikasi baru akan ditambahkan ke file `.env`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Langkah 3: Konfigurasi Database
 
-## Contributing
+1. Buka file `.env` dan ubah pengaturan database sesuai dengan konfigurasi Anda.
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=nama_host_database
+   DB_PORT=port_database
+   DB_DATABASE=nama_database
+   DB_USERNAME=username_database
+   DB_PASSWORD=password_database
+   ```
+   Ganti "nama_host_database", "port_database", "nama_database", "username_database", dan "password_database" sesuai dengan detail koneksi database Anda.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Jalankan perintah migrasi untuk membuat tabel yang diperlukan dalam database:
+   ```
+   php artisan migrate
+   ```
 
-## Code of Conduct
+Langkah 4: Import Database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Jika Anda memiliki file SQL, buatlah database kosong di server database Anda, lalu jalankan perintah berikut untuk mengimpor file SQL ke database:
+   ```
+   mysql -u username_database -p nama_database < path_ke_file_sql
+   ```
+   Ganti "username_database" dengan nama pengguna database Anda, "nama_database" dengan nama database yang telah Anda buat, dan "path_ke_file_sql" dengan jalur lengkap ke file SQL.
 
-## Security Vulnerabilities
+2. Jika Anda memiliki file dump dari database, pastikan Anda telah membuat database kosong di server database Anda, lalu jalankan perintah berikut untuk mengimpor file dump:
+   ```
+   mysql -u username_database -p nama_database < path_ke_file_dump
+   ```
+   Ganti "username_database" dengan nama pengguna database Anda, "nama_database" dengan nama database yang telah Anda buat, dan "path_ke_file_dump" dengan jalur lengkap ke file dump.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Setelah langkah-langkah di atas selesai, proyek Laravel Anda sekarang sudah terinstal dan database telah diimpor. Anda dapat menjalankan proyek Laravel dengan menggunakan perintah `php artisan serve` di terminal dan mengaksesnya melalui browser dengan alamat `http://localhost:
