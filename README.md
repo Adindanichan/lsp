@@ -83,3 +83,20 @@ Langkah 4: Import Database
    Ganti "username_database" dengan nama pengguna database Anda, "nama_database" dengan nama database yang telah Anda buat, dan "path_ke_file_dump" dengan jalur lengkap ke file dump.
 
 Setelah langkah-langkah di atas selesai, proyek Laravel Anda sekarang sudah terinstal dan database telah diimpor. Anda dapat menjalankan proyek Laravel dengan menggunakan perintah `php artisan serve` di terminal dan mengaksesnya melalui browser dengan alamat `http://localhost:
+
+#Info Credential
+1. Asesor
+Username  @lspasesor1234
+Pw
+lspasesor1234
+
+2. Asesi : 
+@lspasesi1234
+Pw
+lspasesi1234
+
+3. Admin
+Username
+@lspadmin1234
+Pw
+lspadmin1234
